@@ -83,6 +83,19 @@ func printMatrix(matrix [][]int) {
 	}
 }
 
+// 最大公約数
+func makeGCD(a, b int) int {
+	if b == 0 {
+		return a
+	}
+	return makeGCD(b, a % b)
+}
+// 最小公倍数
+func makeLCM(a, b int) int {
+	return a * b / makeGCD(a, b)
+}
+
+// クイックソート
 func quickSort(nums []int) []int {
 	if len(nums) < 2 {
 		return nums
