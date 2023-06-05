@@ -35,7 +35,7 @@ func main() {
 
 }
 
-
+// JavaScriptのmap関数
 func Map(vs []int, f func(int) int) []int {
 	vsm := make([]int, len(vs))
 	for i, v := range vs {
@@ -44,6 +44,7 @@ func Map(vs []int, f func(int) int) []int {
 	return vsm
 }
 
+// JavaScriptのfillter関数
 func Fillter(vs []int, f func(int) bool) []int {
 	vsf := make([]int, 0)
 	for _, v := range vs {
@@ -54,6 +55,7 @@ func Fillter(vs []int, f func(int) bool) []int {
 	return vsf
 }
 
+// 2次元スライスの作成
 func makeMatrix(rows, cols int) [][]int {
 	matrix := make([][]int, rows)
 	for i := range matrix {
@@ -62,6 +64,7 @@ func makeMatrix(rows, cols int) [][]int {
 	return matrix
 }
 
+// 2つの2次元スライスの足し算
 func addMatrix(a, b [][]int) [][]int {
 	rows := len(a)
 	cols := len(a[0])
@@ -74,6 +77,7 @@ func addMatrix(a, b [][]int) [][]int {
 	return c
 }
 
+// 2次元スライスの表示
 func printMatrix(matrix [][]int) {
 	for _, row := range matrix {
 		for _, val := range row {
